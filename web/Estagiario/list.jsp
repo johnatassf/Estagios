@@ -1,14 +1,10 @@
-<%-- 
-    Document   : index.jsp
-    Created on : 04/11/2019, 21:09:02
-    Author     : marlo
---%>
+
 
 <%@page import="java.util.ArrayList"%>
 <%@page import="br.com.fatecpg.dao.EstagiarioDAO"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="br.com.fatecpg.jdbc.Estagiario"%>
+<%@page import="br.com.fatecpg.model.Estagiario"%>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -57,7 +53,7 @@
                                         <tbody>
                                             <%
                                                 EstagiarioDAO dao = new EstagiarioDAO();
-                                                ArrayList<Estagiario> estagiarios = dao.getAll();
+                                                ArrayList<Estagiario> estagiarios = dao.listarEstagiarios();
                                                 for (int i = 0; i < estagiarios.size(); i++) {%>
                                             <tr>
                                                 <td><%=estagiarios.get(i).getId()%></td>

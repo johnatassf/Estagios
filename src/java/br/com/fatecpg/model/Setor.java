@@ -1,4 +1,4 @@
-package br.com.fatecpg.jdbc;
+package br.com.fatecpg.model;
 
 /**
  *
